@@ -29,7 +29,7 @@
             </div>
         </nav>
 
-        <h1 class="big-title translate" data-speed="0.1">Сэтгэл шингэсэн бүхэн итгэл төрүүлдэг</h1>
+        <h1 class="big-title translate" data-speed="0.1">Done with heart</h1>
 
         <img src="img/person.png" class="person translate" data-speed="-0.25" alt="">
         <img src="img/bogd.jpg.png" class="bogd translate" data-speed="-0.35" alt="">
@@ -40,23 +40,134 @@
     </header>
 
     <section>
-        <div class="shadow"></div>
-
-        <div class="container">
-            <div class="content opacity">
-                <h3 class="title">
-                    About
-                    <div class="border"></div>
-                </h3>
-                <p class="text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque officiis quos expedita ipsa, a quidem inventore voluptates debitis accusamus tenetur qui et voluptas dicta, culpa earum, doloribus odio consectetur consequuntur soluta quasi nobis! Deserunt voluptatum reiciendis iure expedita sequi quisquam laboriosam temporibus exercitationem.</p>
+            <div class="box">
+                <h2 lax_preset_fadeOut:236.75:0 lax_preset_scaleIn:236.75:0.6">Product Branding</h2>
+                 <div class="container">
+                     <div class="imgBx">
+                            <img src="img/productD1.jpg">
+                        </div>
+                         <div class="content">
+                            <p>Boost your brand with outstanding illustrations, tailored to your marketing campaign,
+                              event promotion or other purpose, crafted with the finest eye to details.
+                                We offer a range of highly impactful hand-crafted illustrated designs, 
+                                 from minimalist modern poster to full-page complex illustrations 
+                                combined with perfectly laid typographic design; the illustration and content are 
+                                harmoniously juxtaposed in ways that cannot be ignored.
+                            </p>
+                         </div>
+                 </div>
             </div>
-
-            <div class="imgContainer opacity">
-                <img src="img/image.jpg" alt="">
-            </div>
-        </div>
     </section>
+    <section>
+            <div class="box1">
+                <h2 lax_preset_fadeOut:236.75:0 lax_preset_scaleIn:236.75:0.6">Package Design</h2>
+                 <div class="container">
+                     <div class="imgBx">
+                            <img src="img/webdesign.png">
+                        </div>
+                         <div class="content">
+                            <p>A high quality and unique Product Packaging Design is the perfect chance 
+                                to make the desired first impression on your target audience.
+                                 Eye catching packaging helps your brand or business,
+                                  make the perfect first impression Improve brand 
+                                  loyalty among Domestic & International market.
+                            </p>
+                         </div>
+                 </div>
+            </div>
+    </section>
+    <section>
+            <div class="box2">
+                <h2 lax_preset_fadeOut:236.75:0 lax_preset_scaleIn:236.75:0.6">Web Design</h2>
+                 <div class="container">
+                     <div class="imgBx">
+                            <img src="img/packageD.jpg">
+                        </div>
+                         <div class="content">
+                            <p>In today’s world businesses are upgrading their systems to use 
+                                complex software and automate their painstaking offline process
+                                 through the creation of custom web platforms, this step is often 
+                                 started by visionaries with experience in niche industries.
+                            </p>
+                         </div>
+                 </div>
+            </div>
+    </section>
+    <section>
+        <div class="box3">
+            <h2 lax_preset_fadeOut:236.75:0 lax_preset_scaleIn:236.75:0.6">Logo Design</h2>
+             <div class="container">
+                 <div class="imgBx">
+                        <img src="img/homeme_logo1.jpg">
+                    </div>
+                     <div class="content">
+                        <p>Each business requires a unique logo to effectively convey their services
+                             and create an everlasting presence. The original things are made by hand
+                            and even today’s modern tools can’t replace it. Your brand needs to stand out
+                             from the crowd to be successful, and our modern handwritten signature logo 
+                             business card and letterhead will do just that.
+                        </p>
+                     </div>
+             </div>
+        </div>
+    </section>  
     
     <script src="app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lax.js" ></script>
+    <script>
+        window.onload = function () {
+          lax.init()
+      
+          // Add a driver that we use to control our animations
+          lax.addDriver('scrollY', function () {
+            return window.scrollY
+          })
+      
+          // Add animation bindings to elements
+          lax.addElements('.box', {
+                 scrollY: {                // Driver name
+                 translateX: [           // CSS property
+                ['elInY', 'elOutY'],  // Driver value map
+                [500,-200],   // Animation value map
+                 {
+                   inertia: 10        // Options
+                 } 
+                ],
+                    opacity: [  ]
+                }})
+                lax.addElements('.box1', {
+                 scrollY: {                // Driver name
+                 translateX: [           // CSS property
+                ['elInY', 'elOutY'],  // Driver value map
+                [-200,200],   // Animation value map
+                 {
+                   inertia: 10        // Options
+                 } 
+                ],
+                    opacity: [  ]
+                }})
+                lax.addElements('.box2', {
+                 scrollY: {                // Driver name
+                 translateX: [           // CSS property
+                ['elInY', 'elOutY'],  // Driver value map
+                [300,-500],   // Animation value map
+                 {
+                   inertia: 10        // Options
+                 } 
+                ],
+                    opacity: [  ]
+                }})
+                lax.addElements('.box3', {
+                 scrollY: {                // Driver name
+                 translateX: [           // CSS property
+                ['elInY', 'elOutY'],  // Driver value map
+                [-400,200],   // Animation value map
+                 {
+                   inertia: 10        // Options
+                 } 
+                ],
+                    opacity: [  ]
+                }})}
+      </script>
 </body>
 </html>
